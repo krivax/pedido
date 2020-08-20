@@ -47,9 +47,7 @@ const Head = () => {
             </ul>
           </Col>
           <Col> 
-            <form className="input-search">
-              <input className="content" type="search" placeholder="O que você Procura?" /><i className="fa fa-search"></i>
-            </form>
+            
           </Col>
           <Col className="text-right" > 
             <Icon path={ mdiCart } size={0.8} color="red"/> R$ 62,50
