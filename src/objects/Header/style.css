@@ -32,11 +32,11 @@
 .menu ul {
   display: flex;
   float: left;
-  margin-left: 0;
   padding-inline-start: 0;
 }
 
 .menu li {
   list-style: none;
   padding-right: 20px;
+
 }
