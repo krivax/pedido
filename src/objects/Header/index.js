@@ -3,9 +3,7 @@ import {
   Container, 
   Row, 
   Col, 
-  InputGroup, 
-  FormControl, 
-  Button 
+
 } from 'react-bootstrap';
 
 import Icon from '@mdi/react'
@@ -15,7 +13,6 @@ import {
   mdiAccount,
   mdiMenu,
   mdiCart,
-  mdiMagnify 
 } from '@mdi/js';
 
 import Logo from '../../assets/images/logo.svg';
