@@ -1,5 +1,12 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { 
+  Container, 
+  Row, 
+  Col, 
+  InputGroup, 
+  FormControl, 
+  Button 
+} from 'react-bootstrap';
 
 import Icon from '@mdi/react'
 import { 
@@ -7,7 +14,8 @@ import {
   mdiGoogleMaps, 
   mdiAccount,
   mdiMenu,
-  mdiCart 
+  mdiCart,
+  mdiMagnify 
 } from '@mdi/js';
 
 import Logo from '../../assets/images/logo.svg';
@@ -34,11 +42,20 @@ const Head = () => {
         <Row className="menu">
           <Col> 
             <ul>
-              <li><Icon path={ mdiMenu } size={1}/> Arethusa</li>
-              <li> R$ 62,50</li>
+              <li><a href="#setores"><Icon path={ mdiMenu } size={1}/> Setores</a></li>
+              <li><a href="#setores"> Ofertas</a></li>
             </ul>
           </Col>
-          <Col > meio</Col>
+          <Col> 
+            <InputGroup >
+              <FormControl className="search" 
+                placeholder="O que você procura?"
+              />
+              <InputGroup.Append>
+                <Button variant="outline" ><Icon path={ mdiMagnify } size={1} color="black" /></Button>
+              </InputGroup.Append>
+            </InputGroup>
+          </Col>
           <Col className="text-right" > 
             <Icon path={ mdiCart } size={0.8} color="red"/> R$ 62,50
             </Col>
