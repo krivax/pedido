@@ -1,0 +1,29 @@
+.header-top {
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  padding: 20px 0 15px ;
+  height: 55px;
+  color: #212121;
+}
+.header-top ul {
+  display: flex;
+  float: right;
+}
+.header-top li {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.header-top.logo{
+  margin-left: auto;
+  margin-right: auto;
+  height: 55px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.menu{
+  height: 50px;
+  padding: 10px;
+}
