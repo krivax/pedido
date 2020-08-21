@@ -1,10 +1,9 @@
 $theme-colors: (
     "info": tomato,
     "danger": #003366
-);
-
-.navbar {
     
-}
+);
+$font-family-sans-serif:("Roboto",sans-serif);
+
 
 @import "~bootstrap/scss/bootstrap";

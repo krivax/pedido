@@ -3,7 +3,8 @@ import {
   Container, 
   Row, 
   Col, 
-
+  InputGroup,
+  FormControl
 } from 'react-bootstrap';
 
 import Icon from '@mdi/react'
@@ -13,6 +14,7 @@ import {
   mdiAccount,
   mdiMenu,
   mdiCart,
+  mdiMagnify
 } from '@mdi/js';
 
 import Logo from '../../assets/images/logo.svg';
@@ -44,10 +46,15 @@ const Head = () => {
             </ul>
           </Col>
           <Col> 
-            
+            <InputGroup className="search">
+              <FormControl  size="sm" placeholder="O que você procura?"/>
+              <InputGroup.Append  className="input-search">
+                <a href="#search"><Icon className="icon" path={ mdiMagnify } size={1}/></a>
+              </InputGroup.Append>
+            </InputGroup>
           </Col>
           <Col className="text-right" > 
-            <Icon path={ mdiCart } size={0.8} color="red"/> R$ 62,50
+            <Icon path={ mdiCart } size={1} color="red"/> R$ 62,50
             </Col>
         </Row>
       </Container>
