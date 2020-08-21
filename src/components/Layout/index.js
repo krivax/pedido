@@ -1,9 +1,13 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 
-const Layout = () => {
+
+const Layout = (props) => {
   return(
-    <h1>Corpo aqui</h1>
+    <Container>
+      {props.children}
+    </Container>
   );
 }
 
