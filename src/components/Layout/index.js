@@ -1,13 +1,11 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import Cart from '../../pages/Cart';
 
 
 
 const Layout = (props) => {
   return(
-    <Container>
-      {props.children}
-    </Container>
+      <Cart/>
   );
 }
 

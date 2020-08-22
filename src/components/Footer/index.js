@@ -1,9 +1,12 @@
 import React from 'react';
-
+import { Container } from 'react-bootstrap';
+import './styles.css';
 
 const Footer = () => {
   return(
-    <h1>Footer aqui</h1>
+    <Container fluid className="footer">
+      Footer
+    </Container>
   );
 }
 

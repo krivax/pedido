@@ -39,13 +39,13 @@ const Head = () => {
         </Row>
 
         <Row className="menu">
-          <Col> 
+          <Col sm={3}> 
             <ul>
               <li><a href="#setores"><Icon path={ mdiMenu } size={1}/> Setores</a></li>
               <li><a href="#setores"> Ofertas</a></li>
             </ul>
           </Col>
-          <Col> 
+          <Col sm={6}> 
             <InputGroup className="search">
               <FormControl  size="sm" placeholder="O que você procura?"/>
               <InputGroup.Append  className="input-search">
@@ -53,7 +53,7 @@ const Head = () => {
               </InputGroup.Append>
             </InputGroup>
           </Col>
-          <Col className="text-right" > 
+          <Col sm={3} className="text-right" > 
             <Icon path={ mdiCart } size={1} color="red"/> R$ 62,50
             </Col>
         </Row>
