@@ -56,7 +56,6 @@
   border:none;
   font-weight: 500 ;
   color: #BDBDBD ;
-  width: 350px;
 }
 
 .search{ 
@@ -69,7 +68,7 @@
 }
 
 .menu .search {
-  width: 400px;
+  width: 350px;
   margin-left: auto;
   margin-right: auto;
 }

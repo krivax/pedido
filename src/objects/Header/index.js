@@ -54,7 +54,7 @@ const Head = () => {
             </InputGroup>
           </Col>
           <Col sm={3} className="text-right" > 
-            <Icon path={ mdiCart } size={1} color="red"/> R$ 62,50
+            <Icon path={ mdiCart } size={1} color="#E53935"/> R$ 62,50
             </Col>
         </Row>
       </Container>

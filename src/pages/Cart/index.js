@@ -1,7 +1,9 @@
 import React from 'react';
-import { Container, Row, Col,Card } from 'react-bootstrap';
+import { Container, Row, Col,Card, Table, Button } from 'react-bootstrap';
 import Icon from '@mdi/react';
-import { mdiCreditCardOutline, mdiTag, mdiTruck } from '@mdi/js'
+import { mdiCreditCardOutline, mdiTag, mdiTruck, mdiMessageOutline, mdiDelete } from '@mdi/js';
+
+import product from '../../assets/images/product.jpg';
 
 import './styles.css'
 
@@ -18,20 +20,61 @@ const Cart = () => {
         </Row>
         </Container>
         </Container>
-        <Container>
           <Row className="text-center title">
             <Col>Carrinho</Col>
-            </Row>
+          </Row>
+        <Container className="content">
           <Row>
-            <Col sm={8}>Produto</Col>
-            <Col sm={4}>
-              <Card>
-                <Card.Header>Resumo do Pedido</Card.Header>
+            <Col sm={8}>
+                <Table>
+                  <tr>
+                    <td>
+                      <figure>
+                        <img src={product} alt="Produto"/>
+                      </figure>
+                      <h2><a href="#teste">Nome de Produto XPTO Qualquer - Marca TantoFaz</a></h2>
+                      <p><a href="#teste">SKU1254023653</a></p>
+                      <p><a href="#teste"><Icon path={ mdiMessageOutline } size={1} color="#E53935"/> Adicionar observação</a></p>
+                    </td>
+                    <td>
+                        aqui é um input
+                    </td>
+                    <tr>
+                    <tr>R$ 12,00</tr>
+                    <tr> <Icon path={ mdiDelete } size={1} color="#E53935"/></tr>
+                    </tr>
+                  </tr>
+                </Table>
+            </Col>
+            <Col lg={4} >
+              <Card className="card-custom no-radius">
+                <Card.Header className="bg-light card-info">
+                  Resumo do pedido
+                </Card.Header>
+                <Row className="summary">
+                  <Col sm={6}>
+                    <Table>
+                      <tr>Itens</tr>
+                      <tr>Total em produtos</tr>
+                      <tr>Descontos</tr>
+                    </Table>
+                  </Col>
+                  <Col sm={6} className="text-right bold">
+                    <Table>
+                      <t>5</t>
+                      <tr>R$ 62,50</tr>
+                      <tr>R$ 0,00</tr>
+                    </Table>
+                  </Col>
+                </Row>
+                <Card.Subtitle>
+                  <Row className="card-info total">
+                  <Col>Total</Col> 
+                  <Col className="text-right">R$ 62,00</Col>
+                  </Row>
+                </Card.Subtitle>
                 <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
+                  <Button href="#finalizar" className="btn btn-block btn-lg btn-danger no-radius">Finalizar a compra</Button>
                 </Card.Body>
               </Card>
             </Col>
