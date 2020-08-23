@@ -8,3 +8,13 @@
   color:#616161;
   padding: 20px 0;
 }
+
+.title {
+  height: 70px;
+  padding-top: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -1.5px;
+  margin-bottom: 30px;
+}

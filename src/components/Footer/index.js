@@ -5,7 +5,6 @@ import './styles.css';
 const Footer = () => {
   return(
     <Container fluid className="footer">
-      Footer
     </Container>
   );
 }

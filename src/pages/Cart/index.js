@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col,Card } from 'react-bootstrap';
 import Icon from '@mdi/react';
 import { mdiCreditCardOutline, mdiTag, mdiTruck } from '@mdi/js'
 
@@ -19,9 +19,22 @@ const Cart = () => {
         </Container>
         </Container>
         <Container>
+          <Row className="text-center title">
+            <Col>Carrinho</Col>
+            </Row>
           <Row>
             <Col sm={8}>Produto</Col>
-            <Col sm={4}>Caixa do pagamento</Col>
+            <Col sm={4}>
+              <Card>
+                <Card.Header>Resumo do Pedido</Card.Header>
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
           </Row>
       </Container>
     </>
