@@ -12,7 +12,7 @@ const Cart = () => {
   return (
     <>
       <Container fluid style={{backgroundColor:'#f5f5f5'}}>
-        <Container>
+        <Container expand>
         <Row className="info">
           <Col><Icon path={ mdiTruck } size={1}/> Delivery apenas para Joinville</Col>
           <Col><Icon path={ mdiTag } size={1}/> Desconto de 10% nas compras acima de R$ 200,00</Col>
@@ -26,7 +26,7 @@ const Cart = () => {
         <Container className="content">
           <Row>
             <Col sm={8}>
-                <Table>
+                {/* <Table>
                   <tr>
                     <td>
                       <figure>
@@ -44,7 +44,7 @@ const Cart = () => {
                     <tr> <Icon path={ mdiDelete } size={1} color="#E53935"/></tr>
                     </tr>
                   </tr>
-                </Table>
+                </Table> */}
             </Col>
             <Col lg={4} >
               <Card className="card-custom no-radius">
