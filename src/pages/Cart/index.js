@@ -3,7 +3,6 @@ import { Container, Row, Col,Card, Table, Button } from 'react-bootstrap';
 import Icon from '@mdi/react';
 import { mdiCreditCardOutline, mdiTag, mdiTruck, mdiMessageOutline, mdiDelete } from '@mdi/js';
 
-import product from '../../assets/images/product.jpg';
 
 import './styles.css'
 
@@ -26,11 +25,10 @@ const Cart = () => {
         <Container className="content">
           <Row>
             <Col sm={8}>
-                {/* <Table>
+                <Table>
                   <tr>
                     <td>
                       <figure>
-                        <img src={product} alt="Produto"/>
                       </figure>
                       <h2><a href="#teste">Nome de Produto XPTO Qualquer - Marca TantoFaz</a></h2>
                       <p><a href="#teste">SKU1254023653</a></p>
@@ -44,7 +42,7 @@ const Cart = () => {
                     <tr> <Icon path={ mdiDelete } size={1} color="#E53935"/></tr>
                     </tr>
                   </tr>
-                </Table> */}
+                </Table>
             </Col>
             <Col lg={4} >
               <Card className="card-custom no-radius">
