@@ -13,7 +13,6 @@
 .title {
   height: 70px;
   padding-top: 30px;
-  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 32px;
   letter-spacing: -1.5px;
@@ -30,6 +29,7 @@
 }
 .card-custom {
   margin-right: 50px;
+  font-family: "Roboto", sans-serif;
 }
 
 .summary{
@@ -69,4 +69,31 @@
   margin-right: 40px ;
   background-color: #fff;
 
+}
+
+
+
+.itens figure img {
+  height: 80px;
+  width: auto;
+}
+
+.itens h4 a,
+.itens h4 a:hover {
+  font-weight: 500;
+  font-size: 16px;
+  color: #424242;
+  text-decoration: none;
+}
+
+.itens h5, p{
+  font-weight: 500 !important;
+  font-size: 12px !important;
+  color: #9e9e9e !important;
+}
+
+.itens p a ,
+.itens p a:hover {
+  color: #e53935 !important;
+  text-decoration: none !important;
 }
