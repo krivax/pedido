@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col,Card, Table, Button } from 'react-bootstrap';
 import Icon from '@mdi/react';
-import { mdiCreditCardOutline, mdiTag, mdiTruck, mdiMessageOutline, mdiDelete } from '@mdi/js';
+import { mdiCreditCardOutline, mdiTag, mdiTruck, mdiMessageOutline, mdiDelete, mdiPlus, mdiMinus } from '@mdi/js';
 import ProductImage from '../../assets/images/product.jpg';
 
 import './styles.css'
@@ -11,7 +11,7 @@ const Cart = () => {
   return (
     <>
       <Container fluid style={{backgroundColor:'#f5f5f5'}}>
-        <Container expand>
+        <Container>
         <Row className="info">
           <Col><Icon path={ mdiTruck } size={1}/> Delivery apenas para Joinville</Col>
           <Col><Icon path={ mdiTag } size={1}/> Desconto de 10% nas compras acima de R$ 200,00</Col>
@@ -26,24 +26,23 @@ const Cart = () => {
           <Row>
             <Col sm={8}>
                 <Table>
-                  <tr>
-                    <td className="itens">
-                      <figure>
-                        <img src={ ProductImage } alt="produto" />
-                      </figure>
-                      <h4><a href="#teste">Nome de Produto XPTO Qualquer - Marca TantoFaz</a></h4>
-                      <h5>SKU1254023653</h5>
-                      <p><a href="#teste"><Icon path={ mdiMessageOutline } size={1} color="#E53935"/> Adicionar observação</a></p>
-                    </td>
-                    <td>
-                        <span><p>-</p><input /><p>-</p></span>
-                    </td>
                     <tr>
-                    <tr>R$ 12,00</tr>
-                    <tr></tr>
-                    <tr> <Icon path={ mdiDelete } size={1} color="#E53935"/></tr>
+                      <td className="itens">
+                        <figure>
+                          <img src={ ProductImage } alt="produto" />
+                        </figure>
+                        <h4><a href="#teste">Nome de Produto XPTO Qualquer - Marca TantoFaz</a></h4>
+                        <h5>SKU1254023653</h5>
+                        <p><a href="#teste"><Icon path={ mdiMessageOutline } size={1} color="#E53935"/> Adicionar observação</a></p>
+                      </td>
+                      <td>
+                          <span className="itens-input"><Icon path={ mdiMinus } size={1} /><input /><Icon path={ mdiPlus } size={1} color="#E53935"/></span>
+                      </td>
+                      <tr>
+                      <tr>R$ 12,00</tr>
+                      <tr> <Icon path={ mdiDelete } size={1} color="#E53935"/></tr>
+                      </tr>
                     </tr>
-                  </tr>
                 </Table>
             </Col>
             <Col lg={4} >
@@ -54,16 +53,16 @@ const Cart = () => {
                 <Row className="summary">
                   <Col sm={8}>
                     <Table>
-                      <tr>Itens</tr>
-                      <tr>Total em produtos</tr>
-                      <tr>Descontos</tr>
+                        <tr>Itens</tr>
+                        <tr>Total em produtos</tr>
+                        <tr>Descontos</tr>
                     </Table>
                   </Col>
                   <Col sm={4} className="text-right bold">
                     <Table>
-                      <t>5</t>
-                      <tr>R$ 62,50</tr>
-                      <tr>R$ 0,00</tr>
+                        <tr>5</tr>
+                        <tr>R$ 62,50</tr>
+                        <tr>R$ 0,00</tr>
                     </Table>
                   </Col>
                 </Row>
