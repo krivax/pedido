@@ -32,6 +32,10 @@
   margin-right: 50px;
 }
 
+.card-custom table {
+  border: 0;
+}
+
 .summary{
   text-transform: none;
   font-weight: 400;
@@ -53,51 +57,49 @@
 }
 
 .product-itens{
-  height: 115px;
-  border-bottom: 1px solid #e0e0e0;
-  margin-left: 50px;
 
+  margin-left: 50px;
 }
 
 .no-radius{
   border-radius: 0 !important;
 }
 
-.product-itens.cart{
+table, td {
   border-bottom: 1px solid #e0e0e0;
-  margin-left: 60px;
-  margin-right: 40px ;
-  background-color: #fff;
-
-}
-
-.itens {
-  display: inline-block;
+  padding-top: 0px !important;
+  
 }
 
 .itens figure img {
-  height: 80px;
+  height: 100px;
   width: auto;
+  padding-top: 10px;
+  padding-right: 18px;
+  margin: auto;
 }
 
-.itens h4 a,
-.itens h4 a:hover {
+.itens td, h4 a,
+.itens td, h4 a:hover {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   color: #424242;
   text-decoration: none;
+  line-break: 5px !important;
 }
 
-.itens h5, p{
+.itens td, h5, p{
   font-weight: 500 !important;
   font-size: 12px !important;
   color: #9e9e9e !important;
+  line-height: 10px !important;
 }
 
-.itens p a ,
-.itens p a:hover {
+.itens td, p a ,
+.itens td, p a:hover {
   color: #e53935 !important;
   text-decoration: none !important;
+  line-height: 10px !important;
 }
 
 .itens-input {
@@ -107,6 +109,7 @@
   height: 25px;
   border-radius: 5px; 
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 .itens-input>p {

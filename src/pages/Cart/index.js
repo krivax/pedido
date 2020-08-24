@@ -24,13 +24,15 @@ const Cart = () => {
           </Row>
         <Container>
           <Row>
-            <Col sm={8}>
-                <Table>
+            <Col lg={8}>
+                <Table className="product-itens">
                     <tr>
                       <td className="itens">
                         <figure>
                           <img src={ ProductImage } alt="produto" />
                         </figure>
+                      </td>
+                      <td>
                         <h4><a href="#teste">Nome de Produto XPTO Qualquer - Marca TantoFaz</a></h4>
                         <h5>SKU1254023653</h5>
                         <p><a href="#teste"><Icon path={ mdiMessageOutline } size={1} color="#E53935"/> Adicionar observação</a></p>
@@ -38,14 +40,11 @@ const Cart = () => {
                       <td>
                           <span className="itens-input"><Icon path={ mdiMinus } size={1} /><input /><Icon path={ mdiPlus } size={1} color="#E53935"/></span>
                       </td>
-                      <tr>
-                      <tr>R$ 12,00</tr>
-                      <tr> <Icon path={ mdiDelete } size={1} color="#E53935"/></tr>
-                      </tr>
+                      <td>R$ 12,00 <Icon path={ mdiDelete } size={1} color="#E53935"/></td>
                     </tr>
                 </Table>
             </Col>
-            <Col lg={4} >
+            <Col lg={4}>
               <Card className="card-custom no-radius">
                 <Card.Header className="bg-light card-info">
                   Resumo do pedido
