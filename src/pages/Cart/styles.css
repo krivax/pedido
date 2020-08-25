@@ -93,14 +93,13 @@
   font-weight: 500 !important;
   font-size: 12px !important;
   color: #9e9e9e !important;
-  line-height: 10px !important;
+  line-height: 15px !important;
 }
 
 .itens p a ,
 .itens p a:hover {
   color: #e53935 !important;
   text-decoration: none !important;
-  line-height: 10px !important;
 }
 
 .itens-input {
