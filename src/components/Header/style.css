@@ -1,4 +1,6 @@
 .top {
   border-bottom: 1px solid #E0e0e0;
   background-color: #fff;
+  /* position: fixed;
+  z-index: 1; */
 }
