@@ -25,24 +25,18 @@ const Cart = () => {
         <Container>
           <Row>
             <Col lg={8}>
-                <Table className="product-itens">
-                    <tr>
-                      <td className="itens">
+                <div className="product-itens">
                         <figure>
                           <img src={ ProductImage } alt="produto" />
                         </figure>
-                      </td>
-                      <td>
-                        <h4><a href="#teste">Nome de Produto XPTO Qualquer - Marca TantoFaz</a></h4>
-                        <h5>SKU1254023653</h5>
-                        <p><a href="#teste"><Icon path={ mdiMessageOutline } size={1} color="#E53935"/> Adicionar observação</a></p>
-                      </td>
-                      <td>
-                          <span className="itens-input"><Icon path={ mdiMinus } size={1} /><input /><Icon path={ mdiPlus } size={1} color="#E53935"/></span>
-                      </td>
-                      <td>R$ 12,00 <Icon path={ mdiDelete } size={1} color="#E53935"/></td>
-                    </tr>
-                </Table>
+                        <span className="itens">
+                          <h4><a href="#teste">Nome de Produto XPTO Qualquer - Marca TantoFaz</a></h4>
+                          <h5>SKU1254023653</h5>
+                          <p><a href="#teste"><Icon path={ mdiMessageOutline } size={1} color="#E53935"/> Adicionar observação</a></p>
+                        </span>
+                        <span className="itens-input"><Icon path={ mdiMinus } size={1} /><input /><Icon path={ mdiPlus } size={1} color="#E53935"/></span>
+                        <span className="itens-total-trash">R$ 12,50 <Icon path={ mdiDelete } size={1} color="#E53935"/> </span>
+                </div>
             </Col>
             <Col lg={4}>
               <Card className="card-custom no-radius">
