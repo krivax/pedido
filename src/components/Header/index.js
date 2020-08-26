@@ -1,21 +1,18 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 import Head from '../../objects/Header';
 
 import './style.css'
 
-const Header = () => {
-  let className = 'top';
-  if(window.scrollTo(0,0) > 10) {
-    className += ' -fixed'
-  }
 
-  console.log(className);
+const Header = () => {
+
   return(
-    <Container className={className} fixed fluid>
+    <Nav className="top -fixed" fixed="top">
         <Head/>
-    </Container>
+    </Nav>
+
   );
 }
 
