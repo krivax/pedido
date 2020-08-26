@@ -1,12 +1,12 @@
 import React from 'react';
-import Cart from '../../pages/Cart';
 
 
 
-const Layout = (props) => {
-  return(
-      <Cart/>
-  );
-}
+const Layout = (props) => (
+  <>
+  {props.children}
+  </>
+)
+
 
 export default Layout;
