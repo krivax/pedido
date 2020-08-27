@@ -3,6 +3,7 @@ import Icon from '@mdi/react';
 import {  mdiMessageOutline, mdiDelete, mdiPlus, mdiMinus } from '@mdi/js';
 
 import api from '../../connection/api';
+import { Button } from 'react-bootstrap';
 
 
 const Itens = () => {
@@ -11,24 +12,14 @@ const Itens = () => {
   const [carts, setCart] = useState([]);
 
   useEffect(() => {
-    api.get('carrinho', {
-      headers: {
-        Autorization: id,
-      }
-    }).then(Response =>{
+    api.get('carrinho').then(Response =>{
         setCart(Response.data);
       })
     },[id]);
 
     async function handleDeleteItem(id) {
       try {
-        await api.delete(`carrinho/${id}`, {
-          headers: {
-            Autorization: id,
-          }
-        }
-      );
-      
+        await api.delete(`carrinho/${id}`);
         setCart(carts.filter (cart => cart.id !== id));
       }catch {
         alert('Erro ao deletar item, tente novamente');
@@ -38,8 +29,10 @@ const Itens = () => {
 
   return (
     <>
+        <ul>
       {carts.map(cart =>(
-        <div className="product-itens" key={cart.id}>
+          
+          <li className="product-itens">
                 <figure>
                   <img src={ cart.url_imagem } alt="produto" />
                 </figure>
@@ -49,9 +42,11 @@ const Itens = () => {
                   <p><a href="#teste"><Icon path={ mdiMessageOutline } size={1} color="#E53935"/> Adicionar observação</a></p>
                 </span>
                 <span className="itens-input"><Icon path={ mdiMinus } size={1} color="#9e9e9e"/><input value="2" /><Icon path={ mdiPlus } size={1} color="#E53935"/></span>
-                <span className="itens-total-trash">{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(cart.valor_unitario)} <a href={() =>handleDeleteItem(cart.id)}><Icon path={ mdiDelete } size={1} color="#E53935" style={{marginTop: 55}}/></a> </span>
-        </div>
+                <span className="itens-total-trash">{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(cart.valor_unitario)}
+                <Icon className="icon" onClick={() =>handleDeleteItem(cart.id)} path={ mdiDelete } size={1} color="#E53935" /></span>
+        </li>
       ))}
+      </ul>
     </>
   )
 }

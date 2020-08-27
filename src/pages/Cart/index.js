@@ -28,10 +28,6 @@ const Cart = () => {
           <Row>
             <Col lg={8}>
                 <Itens />
-                <Itens />
-                <Itens />
-                <Itens />
-                <Itens />
             </Col>
             <Col lg={4}>
               <Summary/>
