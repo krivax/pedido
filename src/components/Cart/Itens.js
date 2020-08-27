@@ -3,7 +3,6 @@ import Icon from '@mdi/react';
 import {  mdiMessageOutline, mdiDelete, mdiPlus, mdiMinus } from '@mdi/js';
 
 import api from '../../connection/api';
-import { Button } from 'react-bootstrap';
 
 
 const Itens = () => {
