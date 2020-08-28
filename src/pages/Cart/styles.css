@@ -1,5 +1,6 @@
 /* Titulo e geral do estilo do cart */
 .info {
+  display: flex;
   background-color: #f5f5f5;
   height: 60px;
   text-align: center;
@@ -8,6 +9,13 @@
   font-size: 12px;
   color:#616161;
   padding: 20px 0;
+}
+.info span{
+  justify-items: center;
+  justify-content: center;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title {
@@ -34,6 +42,7 @@
 }
 .card-custom {
   margin-right: 50px;
+  width: 300px;
 }
 
 .card-custom table {
@@ -65,6 +74,7 @@
   margin-right: 40px;
   height: 125px;
   margin-bottom: 15px;
+  width: 600px;
 }
 .product-itens:hover{
   background-color: #f5f5f5;
@@ -161,3 +171,64 @@
 }
 
 /*FIM Colocando negrito */
+
+
+@media(max-width: 1200px){
+
+  .info {
+
+    padding: 10px 0;
+  }
+
+  .info span{
+    width: 280px;
+  }
+
+  .card-custom {
+    margin-right: 0px;
+    width: 300px;
+  }
+
+  .product-itens{
+    display: flex;
+    margin-left: 0px;
+    width: 700px;
+  }
+
+
+}
+
+@media(max-width: 990px){
+
+  .info {
+    height: auto;
+    padding: 3px 0;
+  }
+
+
+
+  .card-custom {
+    margin-right: auto;
+    width: auto;
+  }
+
+  .product-itens{
+    display: flex;
+    margin-left: auto;
+    width: auto;
+  }
+
+
+}
+
+@media(max-width: 755px){
+
+  .info{
+    display: list-item;
+  }
+
+  .info span {
+    width: auto;
+
+  }
+}

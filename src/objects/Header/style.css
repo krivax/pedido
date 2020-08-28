@@ -40,7 +40,6 @@
 .menu ul {
   display: flex;
   float: left;
-  padding-inline-start: 0;
 }
 
 .menu li {
@@ -80,4 +79,48 @@
 
 .search .icon {
   margin-top:8px
+}
+
+
+@media(max-width: 995px){
+
+
+  .menu .search {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media(max-width: 910px){
+
+
+  .menu .search {
+    width: 0px;
+    margin: auto;
+  }
+  .search input{
+    z-index: -999;
+  }
+  .search .icon {
+    margin-top:-60px;
+  }
+
+}
+
+@media(max-width: 769px){
+  
+  .header-top ul {
+    display: flex;
+    width: 400px;
+    margin-top: -20px;
+    margin-right: -110px;
+  }
+  .header-top li {
+    list-style: none;
+    padding-left: 10px;
+  }
+
+
 }

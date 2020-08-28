@@ -9,7 +9,7 @@ import './style.css'
 const Header = () => {
 
   return(
-    <Nav className="top -fixed" fixed="top">
+    <Nav className="top -fixed">
         <Head/>
     </Nav>
 

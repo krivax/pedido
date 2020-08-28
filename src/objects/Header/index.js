@@ -25,11 +25,11 @@ const Head = () => {
   return(
         <Container>
         <Row expand="lg" className="header-top">
-            <Col sx={8}><Icon path={mdiWhatsapp} size={0.8} /> (47) 9999-9999</Col>
-            <Col className="text-right" >
+            <Col sm={8}><Icon path={mdiWhatsapp} size={0.8} /> (47) 9999-9999</Col>
+            <Col className="text-right mobile" >
               <ul>
-                <li><Icon path={ mdiAccount } size={0.8}/> Arethusa</li>
-                <li><Icon path={ mdiGoogleMaps } size={0.8}/> Bom Retiro - Joinville, SC</li>
+                <li><Icon path={ mdiAccount } size={0.8}/> <span className="hover">Arethusa</span></li>
+                <li><Icon path={ mdiGoogleMaps } size={0.8}/> <span className="hover">Bom Retiro - Joinville, SC</span></li>
               </ul>
             </Col>
         </Row>
@@ -41,7 +41,8 @@ const Head = () => {
         <Row className="menu">
           <Col sm={3}> 
             <ul>
-              <li><a href="#setores"><Icon path={ mdiMenu } size={1}/> Setores</a></li>
+              <li><a href="#setores"><Icon path={ mdiMenu } size={1}/></a></li>
+              <li><a href="#setores">Setores</a></li>
               <li><a href="#setores"> Ofertas</a></li>
             </ul>
           </Col>
