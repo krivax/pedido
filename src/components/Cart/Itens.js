@@ -11,6 +11,9 @@ const Itens = () => {
   const [carts, setCart] = useState([]);
   const [quantidade, setQuantidade] = useState('');
 
+  const data ={
+    quantidade
+  };
   useEffect(() => {
     api.get('carrinho').then(Response =>{
         setCart(Response.data);
@@ -25,7 +28,6 @@ const Itens = () => {
         alert('Erro ao deletar item, tente novamente');
       }
     }
-  
 
   return (
     <>
@@ -42,7 +44,7 @@ const Itens = () => {
                 </span>
                 <span className="itens-input">
                   <Icon  onClick={() =>setQuantidade(cart.quantidade -- )} path={ mdiMinus } size={1} style={{cursor:"pointer"}} color="#9e9e9e"/>
-                    <input value={cart.quantidade} min={1} />
+                    <input value={cart.quantidade } min={1} />
                   <Icon  onClick={() =>setQuantidade(cart.quantidade ++)} path={ mdiPlus } size={1} style={{cursor:"pointer"}} color="#E53935"/>
                 </span>
                 <span className="itens-total-trash">{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(cart.valor_unitario)}

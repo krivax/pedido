@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Icon from '@mdi/react';
 import { mdiCreditCardOutline, mdiTag, mdiTruck } from '@mdi/js';
@@ -6,10 +6,27 @@ import { mdiCreditCardOutline, mdiTag, mdiTruck } from '@mdi/js';
 import Itens from '../../components/Cart/Itens';
 import Summary from '../../components/Cart/Summary';
 
+import api from '../../connection/api';
+
 import './styles.css'
 
 
-const Cart = () => {
+const Cart = (props) => {
+
+  const id = localStorage.getItem('id'); 
+  const [carts, setCart] = useState([]);
+  
+
+
+  useEffect(() => {
+    api.get('carrinho').then(Response =>{
+        setCart(Response.data);
+      })
+    },[id]);
+
+   
+
+
   return (
     <>
       <Container fluid style={{backgroundColor:'#f5f5f5'}}>
@@ -27,10 +44,10 @@ const Cart = () => {
         <Container>
           <Row>
             <Col >
-                <Itens />
+                <Itens cart={props.cart} />
             </Col>
             <Col >
-              <Summary/>
+              <Summary itens={props.cart}/>
             </Col>
           </Row>
       </Container>
