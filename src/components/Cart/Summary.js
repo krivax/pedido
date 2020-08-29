@@ -11,14 +11,14 @@ const Summary = () => {
                   Resumo do pedido
                 </Card.Header>
                 <Row className="summary">
-                  <Col sm={8}>
+                  <Col sx={8}>
                     <Table>
                         <tr>Itens</tr>
                         <tr>Total em produtos</tr>
                         <tr>Descontos</tr>
                     </Table>
                   </Col>
-                  <Col sm={4} className="text-right bold">
+                  <Col sx={4} className="text-right bold">
                     <Table>
                         <tr>5</tr>
                         <tr>R$ 62,50</tr>

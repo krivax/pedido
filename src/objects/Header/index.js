@@ -26,7 +26,7 @@ const Head = () => {
         <Container>
         <Row expand="lg" className="header-top">
             <Col sm={8}><Icon path={mdiWhatsapp} size={0.8} /> (47) 9999-9999</Col>
-            <Col className="text-right mobile" >
+            <Col className="text-right " >
               <ul>
                 <li><Icon path={ mdiAccount } size={0.8}/> <span className="hover">Arethusa</span></li>
                 <li><Icon path={ mdiGoogleMaps } size={0.8}/> <span className="hover">Bom Retiro - Joinville, SC</span></li>
@@ -39,14 +39,14 @@ const Head = () => {
         </Row>
 
         <Row className="menu">
-          <Col sm={3}> 
+          <Col> 
             <ul>
               <li><a href="#setores"><Icon path={ mdiMenu } size={1}/></a></li>
               <li><a href="#setores">Setores</a></li>
               <li><a href="#setores"> Ofertas</a></li>
             </ul>
           </Col>
-          <Col sm={6}> 
+          <Col > 
             <InputGroup className="search">
               <FormControl  size="sm" placeholder="O que você procura?"/>
               <InputGroup.Append  className="input-search">
@@ -54,7 +54,7 @@ const Head = () => {
               </InputGroup.Append>
             </InputGroup>
           </Col>
-          <Col sm={3} className="text-right" > 
+          <Col className="text-right mobile" > 
             <Icon path={ mdiCart } size={1} color="#E53935"/> R$ 62,50
             </Col>
         </Row>
